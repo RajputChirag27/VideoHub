@@ -18,7 +18,7 @@ import img5 from '../assets/5.png';
 const Home = () => {
   return (
     <Box>
-      <MyCarousel />
+      <MyCarousel  h={['60vh','100vh']}/>
 
       <Container maxW={'container.xl'} minH={'100vh'} p={16}>
         <Heading
@@ -75,16 +75,18 @@ const headingOptions = {
 };
 
 const MyCarousel = () => (
-  <Carousel
+  <Carousel 
     autoPlay
     infiniteLoop
     interval={3000}
     showStatus={false}
     showThumbs={false}
     showArrows={false}
+    animationHandler={'slide'}
+    preventMovementUntilSwipeScrollTolerance={true}
   >
 
-    <Box w={'full'} h={['60vh','100vh']}>
+    <Box w={'full'} h={'100vh'}>
       <Image src={img1} h="full" w={'full'} objectFit={'cover'} />
       <Heading bgColor={'blackAlpha.600'} color={'white'} {...headingOptions}>
         VideoHub- Watch The Future
