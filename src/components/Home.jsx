@@ -84,7 +84,7 @@ const MyCarousel = () => (
     showArrows={false}
   >
 
-    <Box w={'full'} h={'100vh'}>
+    <Box w={'full'} h={['60vh','100vh']}>
       <Image src={img1} h="full" w={'full'} objectFit={'cover'} />
       <Heading bgColor={'blackAlpha.600'} color={'white'} {...headingOptions}>
         VideoHub- Watch The Future
